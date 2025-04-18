@@ -924,6 +924,9 @@ async def inspect_websocket(request: Request, call_next):
     return await call_next(request)
 
 
+# 开发环境CORS配置
+# CORS_ALLOW_ORIGIN=["http://localhost:5173"]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ALLOW_ORIGIN,
